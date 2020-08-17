@@ -17,8 +17,13 @@ try {
     const created = await urls.insert({url, squeeze});
     res.json({...created});
 } catch (error) {
-    res.status(400).json({
-        message: error.message
-    })
-}
+    if(error.name==="ValidationError" && error.path === "squeeze"){
+        res.status(400).json({
+            message: "Squeeze can be a combination Alphabets and/or Numbers. Squeeze can also include - or _ as special characters."
+        })
+    }
+    else res.status(400).json({
+            message: error.message
+        })
+    }
 }
