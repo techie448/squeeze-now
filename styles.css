@@ -79,10 +79,16 @@ form {
     padding-top: 5rem;
 
 }
-h1{
+h1,#result{
     padding-top: 2rem;
-
 }
+h2{
+    color: #6c554d;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+
 input {
     margin: 0;
     font-size: 1.2rem;
@@ -95,6 +101,10 @@ input::placeholder{
     color:white;
     opacity:0.7;
 }
+#squeeze::placeholder{
+    color:#76574f;
+    opacity:0.7;
+}
 input:focus {outline:none;}
 
 
@@ -104,26 +114,144 @@ input:focus {outline:none;}
     border-right: 0;
 
 }
-#slug {
+
+#squeeze {
     background-color: #ffce5a;
     border: 0.2rem solid #c99d28;
     color: #76574f;
     border-left: 0;
     border-right: 0;
 }
+
 #submit{
     background-color: #fe7a64;
     border: 0;
 }
+#submit:hover{
+    cursor: pointer;
+}
+h1,h2{
+    cursor: default;
+}
 
 .icon{
-    background: url("github.png");
+    background: url("/github.png");
     background-size: cover;
     height: 3rem;
     width: 3rem;
     margin: 0.3rem;
     float: right;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.loader p {
+    margin: 1rem;
+}
+
+.loader span{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    display:inline-block;
+    position:absolute;
+    left:50%;
+    margin-left:-10px;
+    -webkit-animation:3s infinite linear;
+    -moz-animation:3s infinite linear;
+    -o-animation:3s infinite linear;
+
+}
+
+
+.loader span:nth-child(2){
+    background:#E84C3D;
+    -webkit-animation:kiri 1.2s infinite linear;
+    -moz-animation:kiri 1.2s infinite linear;
+    -o-animation:kiri 1.2s infinite linear;
+
+}
+.loader span:nth-child(3){
+    background:#F1C40F;
+    z-index:100;
+}
+.loader span:nth-child(4){
+    background:#2FCC71;
+    -webkit-animation:kanan 1.2s infinite linear;
+    -moz-animation:kanan 1.2s infinite linear;
+    -o-animation:kanan 1.2s infinite linear;
+}
+
+
+@-webkit-keyframes kanan {
+    0% {-webkit-transform:translateX(20px);
+    }
+
+    50%{-webkit-transform:translateX(-20px);
+    }
+
+    100%{-webkit-transform:translateX(20px);
+        z-index:200;
+    }
+}
+@-moz-keyframes kanan {
+    0% {-moz-transform:translateX(20px);
+    }
+
+    50%{-moz-transform:translateX(-20px);
+    }
+
+    100%{-moz-transform:translateX(20px);
+        z-index:200;
+    }
+}
+@-o-keyframes kanan {
+    0% {-o-transform:translateX(20px);
+    }
+
+    50%{-o-transform:translateX(-20px);
+    }
+
+    100%{-o-transform:translateX(20px);
+        z-index:200;
+    }
+}
+
+
+
+
+@-webkit-keyframes kiri {
+    0% {-webkit-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-webkit-transform:translateX(20px);
+    }
+    100%{-webkit-transform:translateX(-20px);
+    }
+}
+
+@-moz-keyframes kiri {
+    0% {-moz-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-moz-transform:translateX(20px);
+    }
+    100%{-moz-transform:translateX(-20px);
+    }
+}
+@-o-keyframes kiri {
+    0% {-o-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-o-transform:translateX(20px);
+    }
+    100%{-o-transform:translateX(-20px);
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
     form {
@@ -136,7 +264,7 @@ input:focus {outline:none;}
 border-bottom: 0;
     }
 
-    #slug{
+    #squeeze{
         border: 0.2rem solid #c99d28;
 border-top: 0;
         border-bottom: 0;

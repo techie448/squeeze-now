@@ -1,6 +1,11 @@
 {
   "routes" : [
     {"src":  "/", "dest": "/index.html"},
+    {"src":  "/notFound.html", "dest": "/notFound.html"},
+    {"src":  "/favicon.png", "dest": "/favicon.png"},
+    {"src":  "/index.js", "dest": "/index.js"},
+    {"src":  "/github.png", "dest": "/github.png"},
+    {"src":  "/styles.css", "dest": "/styles.css"},
     {"src":  "/api/url", "dest": "/api/url.js"},
     {"src": "/(.*)", "dest": "/api/?id=$1"}
 
