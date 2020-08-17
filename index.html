@@ -6,15 +6,36 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Easy Shortener</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<pre><a href="https://github.com/techie448/url-shortener">https://github.com/techie448/url-shortener</a></pre>
-<h1>Easy Shortener | es.now.sh</h1>
+<body class="body-light">
+<a href="https://github.com/techie448/url-shortener" class='icon'></a>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 130" class="lamp">
+    <!-- bulb -->
+    <g>
+        <circle class="bulb" style="" cx="30" cy="109.3" r="10.7"/>
+        <line style="fill:none;stroke:#D7D5AF;stroke-width:0.263;stroke-linecap:round;stroke-miterlimit:10;" x1="28.1" y1="108.1" x2="27.4" y2="113.4"/>
+        <line style="fill:none;stroke:#D7D5AF;stroke-width:0.263;stroke-linecap:round;stroke-miterlimit:10;" x1="32" y1="108.1" x2="32.6" y2="113.4"/>
+        <polyline style="fill:none;stroke:#D7D5AF;stroke-width:0.263;stroke-linecap:round;stroke-miterlimit:10;" points="27.8,113.5 28.3,112.8 28.8,113.5 29.6,112.8 30,113.5 30.7,112.9 31.2,113.5 31.8,112.8 32.3,113.5"/>
+    </g>
+    <!-- /bulb -->
+    <rect x="20.7" y="66.7" style="fill:#6c554d;" width="18.6" height="15.6"/>
+    <rect x="28.5" y="0" style="fill:#6c554d;" width="3" height="66.7"/>
+    <path style="fill:#6c554d;" d="M30,80.3c-16.6,0-30,13.4-30,30h60C60,93.8,46.6,80.3,30,80.3z"/>
+    <path style="fill:#6c554d;" d="M30,80.3c-16.6,0-30,13.4-30,30h60C60,93.8,46.6,80.3,30,80.3z"/>
+    <!--
+      <g class="switch">
+        <line style="fill:none;stroke:#2D2D2F;stroke-width:0.5;stroke-miterlimit:10;" x1="49" y1="100" x2="49" y2="118"/>
+        <circle style="fill:none;stroke:#2D2D2F;stroke-width:0.5;stroke-miterlimit:10;" cx="49" cy="120" r="1.6"/>
+      </g>
+    -->
+</svg>
+    <h1>Squeeze Now</h1>
+	<p> URL Shortener </p>
 <form method="post" action="/api/url">
-    <input placeholder="slug" name="slug">
-    <input placeholder="url" type="url" name="url" required>
-    <input type="submit">
-</form>
-<div id="result"></div>
+		<input type="url" placeholder="Paste long link and shorten it" name="url" id="url" required>
+			<input type="text" placeholder="Custom name" id="slug" name="slug">
+			<input type="submit" value="SQUEEZE NOW!" id="submit">
+	</form>
 </body>
 </html>

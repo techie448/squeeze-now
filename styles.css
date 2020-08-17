@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+
+}
+body {
+    background-color: #6c554d;
+    margin: 0;
+    text-align: center;
+    animation: body 3s forwards;
+}
+.lamp {
+    width: 10em;
+    display: inline-block;
+    transform-origin: top center;
+    transform: rotate(45deg);
+    animation: lamp 3s forwards;
+}
+.bulb {
+    fill: #fbf8ca;
+    fill-opacity: 0.1;
+    animation: bulb 0.3s 0.3s 5 cubic-bezier(0.26, 1.17, 0.89, -0.74) alternate forwards;
+}
+.switch {
+    transition: transform 0.3s;
+}
+.switch:active {
+    transform: translateY(5rem);
+}
+@keyframes bulb {
+    to {
+        fill-opacity: 1;
+        fill: #fbf8ca;
+    }
+}
+
+@keyframes body {
+    to {
+        background-color: #ebd8c4;
+    }
+
+}
+@keyframes lamp {
+    5% {
+        transform: rotate(-45deg);
+    }
+    10% {
+        transform: rotate(35deg);
+    }
+    15% {
+        transform: rotate(-35deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-15deg);
+    }
+    65% {
+        transform: rotate(3deg);
+    }
+    85% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+form {
+    width: 80vw;
+    max-width: 60rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    justify-items: stretch;
+    padding-top: 5rem;
+
+}
+h1{
+    padding-top: 2rem;
+
+}
+input {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    border-right: 0;
+    color: white;
+}
+
+input::placeholder{
+    color:white;
+    opacity:0.7;
+}
+input:focus {outline:none;}
+
+
+#url{
+    background-color: #6dc7c7;
+    border: 0.2rem solid #389595;
+    border-right: 0;
+
+}
+#slug {
+    background-color: #ffce5a;
+    border: 0.2rem solid #c99d28;
+    color: #76574f;
+    border-left: 0;
+    border-right: 0;
+}
+#submit{
+    background-color: #fe7a64;
+    border: 0;
+}
+
+.icon{
+    background: url("github.png");
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+    margin: 0.3rem;
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #url{
+        border: 0.2rem solid #389595;
+border-bottom: 0;
+    }
+
+    #slug{
+        border: 0.2rem solid #c99d28;
+border-top: 0;
+        border-bottom: 0;
+    }
+}
