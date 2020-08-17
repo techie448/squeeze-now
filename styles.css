@@ -82,6 +82,8 @@ form {
 h1,#result{
     padding-top: 2rem;
 }
+
+
 h2{
     color: #6c554d;
     font-size: 1.3rem;
@@ -272,5 +274,8 @@ border-bottom: 0;
         border: 0.2rem solid #c99d28;
 border-top: 0;
         border-bottom: 0;
+    }
+    #result{
+        padding-bottom: 20rem;
     }
 }
