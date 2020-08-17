@@ -38,7 +38,7 @@
 </header>
 <main id="app">
 <form @submit.prevent="squeezeNow()">
-		<input type="url" placeholder="Paste long link and shorten it" v-model="url" name="url" id="url" required>
+		<input type="url" placeholder="Paste long link and shorten it" v-model="url" name="url" id="url" required autofocus>
 			<input type="text" placeholder="Squeeze Name" id="squeeze" v-model="squeeze" name="squeeze">
 			<input type="submit" value="SQUEEZE NOW!" id="submit">
 	</form>
