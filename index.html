@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easy Shortener</title>
+</head>
+
+<body>
+<h1>Easy Shortener | es.now.sh</h1>
+<form method="post" action="/api/url">
+    <input placeholder="slug" name="slug">
+    <input placeholder="url" type="url" name="url" required>
+    <input type="submit">
+</form>
+<div id="result"></div>
+</body>
+</html>
