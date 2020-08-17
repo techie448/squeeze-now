@@ -11,6 +11,7 @@ const app = new Vue({
         async squeezeNow() {
             this.error = '';
             this.result = null;
+            window.scrollTo(0,document.body.scrollHeight);
             this.loading = true;
             const response = await fetch('/api/url', {
                 method: 'POST',
