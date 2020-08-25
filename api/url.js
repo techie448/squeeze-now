@@ -6,7 +6,21 @@ const schema = yup.object().shape({
     url: yup.string().trim().url().required(),
 });
 module.exports  = async (req, res) => {
+
 try {
+    console.log('hello')
+    console.log(req.method)
+    if(req.method === 'GET'){
+        const {  id: squeeze } = req.query;
+        const urlObj = await urls.findOne({ squeeze });
+        if(urlObj){
+            return res.json({
+                url: urlObj.url,
+                squeeze: urlObj.squeeze
+            });
+        }else throw new Error("Squeeze Not Found.")
+
+    }else if(req.method === 'POST'){
     let { squeeze, url } = req.body;
     await schema.validate({squeeze, url,});
 
@@ -16,6 +30,9 @@ try {
     squeeze = squeeze.toLowerCase();
     const created = await urls.insert({url, squeeze});
     res.json({...created});
+    }else {
+        throw new Error('INVALID API REQUEST. 🚫');
+    }
 } catch (error) {
     if(error.name==="ValidationError" && error.path === "squeeze"){
         res.status(400).json({

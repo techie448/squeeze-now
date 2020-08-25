@@ -7,6 +7,8 @@
     {"src":  "/github.png", "dest": "/github.png"},
     {"src":  "/styles.css", "dest": "/styles.css"},
     {"src":  "/api/url", "dest": "/api/url.js"},
+    {"src":  "/api/url/", "dest": "/api/url.js"},
+    {"src":  "/api/url/(.*)", "dest": "/api/url.js"},
     {"src": "/(.*)", "dest": "/api/?id=$1"}
 
   ]

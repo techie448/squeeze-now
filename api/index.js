@@ -4,8 +4,8 @@ module.exports  = async (req, res) => {
     try {
         const url = await urls.findOne({ squeeze });
         if (url) return res.send(`<script>window.location = '${url.url}';</script>`);
-        return res.status(404).send(`<script>window.location = 'notFound.html';</script>`);
+        return res.status(404).send(`<script>window.location = '/notFound.html';</script>`);
     } catch (error) {
-        return res.status(404).send(`<script>window.location = 'notFound.html';</script>`);
+        return res.status(404).send(`<script>window.location = '/notFound.html';</script>`);
     }
 }
