@@ -140,15 +140,6 @@ h1,h2{
     cursor: default;
 }
 
-.icon{
-    background: url("/github.png");
-    background-size: cover;
-    height: 2.5rem;
-    width: 2.5rem;
-    margin: 0.5rem;
-    float: right;
-}
-
 a {
     color: inherit;
 }
@@ -168,6 +159,24 @@ a {
     -webkit-animation:3s infinite linear;
     -moz-animation:3s infinite linear;
     -o-animation:3s infinite linear;
+
+}
+
+.icon{
+    float: right;
+}
+.icon .api{
+    line-height: 3.5rem;
+    margin: 1rem;
+
+}
+.icon .github{
+    background: url("/github.png");
+    background-size: cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+    float: right;
 
 }
 
