@@ -37,14 +37,14 @@
     -->
 </svg>
 <header>
-    <h1>Squeeze Now</h1>
+    <h1>Easy Shorten Now</h1>
 	<h2>URL Shortener</h2>
 </header>
 <main id="app">
 <form @submit.prevent="squeezeNow()">
 		<input type="url" placeholder="Paste long link and shorten it" v-model="url" name="url" id="url" required autofocus>
-			<input type="text" placeholder="Squeeze Name" id="squeeze" v-model="squeeze" name="squeeze">
-			<input type="submit" value="SQUEEZE NOW!" id="submit">
+			<input type="text" placeholder="Short Name" id="squeeze" v-model="squeeze" name="squeeze">
+			<input type="submit" value="SHORTEN NOW!" id="submit">
 	</form>
     <div id="result">
         <template v-if="loading"> <div class="loader">
@@ -54,7 +54,7 @@
             <span></span>
         </div></template>
         <template v-else>
-        <p v-if="result">URL Squeezed to : <a :href="result">{{result}}</a> 🎊</p>
+        <p v-if="result">URL Shortened to : <a :href="result">{{result}}</a> 🎊</p>
         <p v-else class="error">{{error}}</p>
         </template>
     </div>

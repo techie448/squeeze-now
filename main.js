@@ -29,7 +29,7 @@ const app = new Vue({
                     if (response.ok) {
                         const result = await response.json();
                         this.loading = false;
-                        this.result = `https://squeeze.now.sh/${result.squeeze}`;
+                        this.result = `https://es.now.sh/${result.squeeze}`;
                         this.squeeze = '';
                         this.url = '';
                     } else {
